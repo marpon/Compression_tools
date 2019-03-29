@@ -100,7 +100,7 @@ end function
 /'  main test code  '/
 
 'open file and put the content into string
-dim as string sin0 = filetostring(_file_to_compress_)               ' _file_to_compress_ file to test compression, defined at the top
+dim as string sin0 = filetostring(_FILE_TO_COMPRESS_)               ' _FILE_TO_COMPRESS_ file to test compression, defined at the top
 
 dim as ulong i0 = len(sin0)
 print : print "original size  " & i0
@@ -108,18 +108,16 @@ print : print "original size  " & i0
 dim as ulong crc = get_crc32(strptr(sin0) , i0)                     ' just to verify crc32 function, not needeed on the following test
 print "crc32 = " ; crc
 
-dim         as double d0
+dim         as double d0                                
 dim         as ulong i2
 dim         as ulong i3
-dim         as ubyte ptr enc0
+dim         as ulong i4
+dim         as ulong iret1                                
 dim         as ubyte ptr enc1
 dim         as ubyte ptr dec1
 dim         as ubyte ptr workmem
-dim         as ulong i4
-dim         as ulong iret1
 
-
-if i0 then
+if i0c <> 0 then
 
     d0 = timer()
 
