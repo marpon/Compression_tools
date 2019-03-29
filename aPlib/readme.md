@@ -1,4 +1,6 @@
-aPlib exemple for freebasic
+aPlib static libs  example for freebasic
 
 
-for windows  libaplibw32.a   or libaplibw64.a
+for windows  libaplib32w.a   or libaplib64w.a
+
+for linux    libaplib32l.a   or libaplib64l.a 
